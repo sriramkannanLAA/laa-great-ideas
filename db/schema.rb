@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_105753) do
+ActiveRecord::Schema.define(version: 2018_10_15_124354) do
+
+  create_table "ideas", force: :cascade do |t|
+    t.integer "area_of_interest"
+    t.integer "business_area"
+    t.integer "it_system"
+    t.string "title"
+    t.text "idea"
+    t.integer "benefits"
+    t.text "impact"
+    t.integer "involvement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_ideas_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
