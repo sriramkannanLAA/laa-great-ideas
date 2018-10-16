@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :it_system %>
-    <%= form.number_field :it_system %>
+    <%= form.select :it_system, Idea.it_systems %>
   </div>
 
   <div class="field">
@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :benefits %>
-    <%= form.number_field :benefits %>
+    <%= form.select :benefits, Idea.benefits %>
   </div>
 
   <div class="field">
@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :involvement %>
-    <%= form.number_field :involvement %>
+    <%= form.select :involvement, Idea.involvements %>
   </div>
 
   <div class="actions">
