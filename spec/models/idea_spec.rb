@@ -14,6 +14,8 @@ RSpec.describe Idea, type: :model do
     it { should define_enum_for(:benefits)}
     it { should define_enum_for(:involvement)}
     it { should define_enum_for(:it_system)}
+    it { should define_enum_for(:business_area)}
+    it { should define_enum_for(:area_of_interest)}
   end
 
 end

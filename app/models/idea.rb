@@ -34,4 +34,36 @@ class Idea < ApplicationRecord
     :i_want_to_lead_on_this,
     :no_involvement
   ]
+
+  enum business_area: [
+    :exceptional_and_complex_cases, 
+    :crime, 
+    :civil,
+    :delivery_cm_other,
+    :central_commissioning,
+    :public_defender_service,
+    :service_development,
+    :contract_management,
+    :cla,
+    :digital,
+    :assurance,
+    :finance,
+    :planning_and_performance,
+    :ceo_office,
+    :communications,
+    :operational_change_and_improvement,
+    :engagement_and_inclusion,
+    :corporate_centre_correspondence,
+    :central_legal
+  ]
+
+  enum area_of_interest: [
+    :equality_and_diversity,
+    :it_development,
+    :learning_and_development,
+    :my_business_area,
+    :my_office,
+    :other_business_area,
+    :staff_engagement
+  ]
 end
