@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :area_of_interest %>
-    <%= form.number_field :area_of_interest %>
+    <%= form.select :area_of_interest, Idea.area_of_interests %>
   </div>
 
   <div class="field">
     <%= form.label :business_area %>
-    <%= form.number_field :business_area %>
+    <%= form.select :business_area, Idea.business_areas %>
   </div>
 
   <div class="field">
