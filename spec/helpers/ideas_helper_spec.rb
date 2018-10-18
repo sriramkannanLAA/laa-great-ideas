@@ -1,13 +1,11 @@
 require 'rails_helper'
+include IdeasHelper
 
-# Specs in this file have access to a helper object that includes
-# the IdeasHelper. For example:
-#
-# describe IdeasHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
-
+RSpec.describe "Ideas helper" do
+  describe "Enum to select" do
+    it "should return an array of keys and humanized values" do
+      area = enum_to_select(Idea.business_areas).select{ |h, k| k == "exceptional_and_complex_cases"}
+      expect(area[0][0]).to eq("Exceptional and complex cases")
+    end
+  end
+end
