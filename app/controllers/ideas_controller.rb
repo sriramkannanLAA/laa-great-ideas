@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_idea, only: [:show, :edit, :update, :destroy, :submit]
 
   # GET /ideas
   # GET /ideas.json
@@ -61,10 +61,15 @@ class IdeasController < ApplicationController
     end
   end
 
+  def submit
+    @idea.submission_date = Time.now
+    @idea.save
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_idea
-      @idea = Idea.find(params[:id])
+      @idea = Idea.find(params[:id]||params[:idea_id]) 
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
