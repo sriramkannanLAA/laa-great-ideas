@@ -40,6 +40,15 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "submitting an idea" do
+      it "should set the submission date on an idea" do
+       idea =  @user.ideas.create!(title: "Submit idea")
+        post idea_submit_path(idea)
+        idea.reload
+        expect(idea.submission_date).to_not be_nil 
+      end
+    end
+
   end
 
   describe "As user who isn't logged in" do
