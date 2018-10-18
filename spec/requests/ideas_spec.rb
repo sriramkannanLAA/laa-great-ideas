@@ -95,7 +95,6 @@ RSpec.describe "Ideas", type: :request do
       it "redirects to the login page" do
         get ideas_path
         expect(response).to redirect_to user_session_path
-
       end
     end
   end
