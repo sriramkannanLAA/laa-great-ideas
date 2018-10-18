@@ -40,6 +40,14 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "delete an idea" do
+      it "should delete an existing idea" do
+        idea = @user.ideas.create!(title: "An idea to delete")
+        delete idea_path(idea)
+        expect(Idea.exists?(idea.id)).to eq false
+      end
+    end
+
     describe "submitting an idea" do
       it "should set the submission date on an idea" do
        idea =  @user.ideas.create!(title: "Submit idea")
