@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :area_of_interest %>
-    <%= form.select :area_of_interest, Idea.area_of_interests %>
+    <%= form.select :area_of_interest, Idea.area_of_interests.keys %>
   </div>
 
   <div class="field">
     <%= form.label :business_area %>
-    <%= form.select :business_area, Idea.business_areas %>
+    <%= form.select :business_area, Idea.business_areas.keys%>
   </div>
 
   <div class="field">
     <%= form.label :it_system %>
-    <%= form.select :it_system, Idea.it_systems %>
+    <%= form.select :it_system, Idea.it_systems.keys %>
   </div>
 
   <div class="field">
@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :benefits %>
-    <%= form.select :benefits, Idea.benefits %>
+    <%= form.select :benefits, Idea.benefits.keys %>
   </div>
 
   <div class="field">
@@ -48,7 +48,7 @@
 
   <div class="field">
     <%= form.label :involvement %>
-    <%= form.select :involvement, Idea.involvements %>
+    <%= form.select :involvement, Idea.involvements.keys %>
   </div>
 
   <div class="actions">
