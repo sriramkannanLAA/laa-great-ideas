@@ -31,6 +31,15 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "update an idea" do
+      it "should change an existing idea" do
+        idea = @user.ideas.create!(title: "An idea")
+        patch idea_path(idea), params: { idea: { title: "New Test title"}}
+        idea.reload
+        expect(idea.title).to eq ("New Test title")
+      end
+    end
+
   end
 
   describe "As user who isn't logged in" do
