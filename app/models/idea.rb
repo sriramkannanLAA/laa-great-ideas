@@ -10,7 +10,7 @@ class Idea < ApplicationRecord
   validates :involvement, presence: true, if: :submitted?
 
   def submitted?
-    submission_date
+    submission_date.present?
   end
 
   enum benefits: [

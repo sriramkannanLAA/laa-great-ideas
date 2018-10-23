@@ -7,7 +7,6 @@ RSpec.describe Idea, type: :model do
   end
 
   describe "validations" do
-    it { should validate_presence_of(:title) }
     context "if submitted" do
       before { allow(subject).to receive(:submitted?).and_return(true) }
       it { should validate_presence_of(:title) }
@@ -17,6 +16,17 @@ RSpec.describe Idea, type: :model do
       it { should validate_presence_of(:benefits) }
       it { should validate_presence_of(:impact) }
       it { should validate_presence_of(:involvement) }
+    end
+
+    context "if not submitted it" do
+      before { allow(subject).to receive(:submitted?).and_return(false) }
+      it { should validate_presence_of(:title) }
+      it { should_not validate_presence_of(:area_of_interest) }
+      it { should_not validate_presence_of(:business_area) }
+      it { should_not validate_presence_of(:it_system) }
+      it { should_not validate_presence_of(:benefits) }
+      it { should_not validate_presence_of(:impact) }
+      it { should_not validate_presence_of(:involvement) }
     end
   end
 

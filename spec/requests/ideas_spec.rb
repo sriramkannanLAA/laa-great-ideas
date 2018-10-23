@@ -84,6 +84,7 @@ RSpec.describe "Ideas", type: :request do
         )
         post idea_submit_path(idea)
         expect(idea.submission_date).to be_nil
+        expect(response.body).to include('prohibited this idea from being saved:')
       end
     end 
 
