@@ -1,7 +1,18 @@
 class Idea < ApplicationRecord
   belongs_to :user
   validates :title, presence: true
-  
+  validates :area_of_interest, presence: true, if: :submitted?
+  validates :business_area, presence: true, if: :submitted?
+  validates :it_system, presence: true, if: :submitted?
+  validates :idea, presence: true, if: :submitted?
+  validates :benefits, presence: true, if: :submitted?
+  validates :impact, presence: true, if: :submitted?
+  validates :involvement, presence: true, if: :submitted?
+
+  def submitted?
+    submission_date
+  end
+
   enum benefits: [
     :better_decision_making,
     :improved_reputation,
