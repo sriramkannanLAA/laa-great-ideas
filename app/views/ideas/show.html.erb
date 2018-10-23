@@ -40,5 +40,11 @@
   <%= @idea.involvement %>
 </p>
 
+<p>
+  <strong>Submission date:</strong>
+  <%= @idea.submission_date %>
+</p>
+
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>
+<%= button_to 'Submit', idea_submit_path(@idea) %>
