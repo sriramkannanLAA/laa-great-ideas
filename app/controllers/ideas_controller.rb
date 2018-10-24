@@ -63,7 +63,11 @@ class IdeasController < ApplicationController
 
   def submit
     @idea.submission_date = Time.now
-    @idea.save
+    if @idea.save
+      redirect_to @idea, notice: 'Idea was successfully submitted.'
+    else
+      render :edit
+    end
   end
 
   private

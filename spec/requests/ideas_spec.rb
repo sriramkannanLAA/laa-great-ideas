@@ -48,14 +48,45 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
-    describe "submitting an idea" do
-      it "should set the submission date on an idea" do
-       idea =  @user.ideas.create!(title: "Submit idea")
+    describe "submitting an idea with all data" do
+      it "should set the submission date on an idea and all fields present" do
+       idea =  @user.ideas.create!(
+          title: "Submit idea",
+          submission_date: Time.now,
+          area_of_interest: 0,
+          business_area: 0,
+          it_system: 0,
+          idea: "Idea",
+          benefits: 0,
+          impact: "Impact",
+          involvement: 0
+        )
         post idea_submit_path(idea)
         idea.reload
         expect(idea.submission_date).to_not be_nil 
+        expect(idea.area_of_interest).to_not be_nil 
+        expect(idea.business_area).to_not be_nil 
+        expect(idea.it_system).to_not be_nil 
+        expect(idea.title).to_not be_nil 
+        expect(idea.idea).to_not be_nil 
+        expect(idea.benefits).to_not be_nil 
+        expect(idea.impact).to_not be_nil 
+        expect(idea.involvement).to_not be_nil 
       end
-    end
+    end 
+
+    describe "submitting an idea with missing data" do
+      it "should not set the submission date on an idea where fields are missing" do
+        idea = @user.ideas.create!(
+          title: "Submit idea",
+          area_of_interest: 0,
+          business_area: 0
+        )
+        post idea_submit_path(idea)
+        expect(idea.submission_date).to be_nil
+        expect(response.body).to include('prohibited this idea from being saved:')
+      end
+    end 
 
   end
 
