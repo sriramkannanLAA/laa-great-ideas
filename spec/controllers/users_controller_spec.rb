@@ -17,9 +17,9 @@ RSpec.describe UsersController, type: :controller do
       sign_in default_user
     end
 
-    describe "GET #list" do
+    describe "GET #index" do
       it "redirect to ideas page" do
-        get :list, session: valid_session
+        get :index, session: valid_session
         expect(response).to redirect_to(ideas_url)
       end
     end
@@ -30,12 +30,12 @@ RSpec.describe UsersController, type: :controller do
       sign_in admin_user
     end
 
-    describe "GET #list" do
+    describe "GET #index" do
       it "returns a success response" do
-        get :list, session: valid_session
+        get :index, session: valid_session
         expect(response).to be_successful
       end
     end
   end
-  
+
 end
