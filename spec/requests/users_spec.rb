@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+RSpec.describe "Users", type: :request do
 
   let(:default_user){
     User.create!(email: 'me@me.com', password: 'change_me')
@@ -10,16 +10,14 @@ RSpec.describe UsersController, type: :controller do
     User.create!(email: 'me@me.com', password: 'change_me', admin: true)
   }
 
-  let(:valid_session) { {} }
-
   describe "as a default user" do
     before do
       sign_in default_user
     end
 
-    describe "GET #index" do
-      it "redirect to ideas page" do
-        get :index, session: valid_session
+    describe "requesting the users index" do
+      it "redirects to ideas page" do
+        get users_path
         expect(response).to redirect_to(ideas_url)
       end
     end
@@ -30,10 +28,11 @@ RSpec.describe UsersController, type: :controller do
       sign_in admin_user
     end
 
-    describe "GET #index" do
+    describe "requesting the users index" do
       it "returns a success response" do
-        get :index, session: valid_session
+        get users_path
         expect(response).to be_successful
+        expect(response.body).to include('Users')
       end
     end
   end
