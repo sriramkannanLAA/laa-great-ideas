@@ -17,7 +17,11 @@ RSpec.describe "Ideas", type: :request do
         expect(response).to have_http_status(200)
         expect(response.body).to include "New idea1"
         expect(response.body).to include "New idea2"
+      end
 
+      it "should not show a users button" do
+        get ideas_path
+        expect(response.body).not_to include '<a href="/users">Users</a>'
       end
     end
 
@@ -99,4 +103,27 @@ RSpec.describe "Ideas", type: :request do
     end
   end
 
+  describe "As an admin user who is logged in" do
+
+    before do
+      @admin_user = User.create!(email:'admin@me.com', password: 'change_me', admin: true)
+      sign_in @admin_user
+    end
+
+    describe "GET /ideas" do
+      it "should show a list of ideas" do
+        @admin_user.ideas.create!(title: "New idea1")
+        @admin_user.ideas.create!(title: "New idea2")
+        get ideas_path
+        expect(response).to have_http_status(200)
+        expect(response.body).to include "New idea1"
+        expect(response.body).to include "New idea2"
+      end
+
+      it "should show a users button" do
+        get ideas_path
+        expect(response.body).to include '<a href="/users">Users</a>'
+      end
+    end
+  end
 end
