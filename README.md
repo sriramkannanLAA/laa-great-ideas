@@ -13,6 +13,9 @@ TBC
 ```
 bundle install
 ```
+```
+npm install
+```
 
 ### Setup dummy data
 TBC

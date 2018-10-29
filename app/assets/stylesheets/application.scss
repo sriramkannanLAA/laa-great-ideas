@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+$govuk-images-path: "/assets/";
+$govuk-fonts-path: "/assets/";
+
+$govuk-global-styles: true;
+
+@import "govuk-frontend/all"
