@@ -20,7 +20,10 @@
         <td><%= user.created_at %></td>
         <td><%= user.updated_at %></td>
         <td><%= user.admin %></td>
+        <td><%= link_to 'Show', user %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'Back', ideas_path %>
