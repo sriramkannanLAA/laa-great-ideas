@@ -53,7 +53,7 @@ RSpec.describe "Users", type: :request do
       end
     end
 
-    describe "clicking toggle admin button" do
+    describe "toggle admin" do
 
       it "updates to true if currently false" do
         user = User.create!(email: 'test@test.com', password: 'change_me', admin: false)

@@ -11,11 +11,8 @@ class UsersController < ApplicationController
 
   def toggle_admin
     @user.admin = !@user.admin
-    if @user.save
-      redirect_to user_path(@user), notice: 'Admin status updated'
-    else
-      redirect_to user_path(@user), notice: 'Unable to update admin status'
-    end
+    @user.save
+    redirect_to user_path(@user), notice: 'Admin status updated'
   end
 
   private
