@@ -1,5 +1,7 @@
 {
   "name": "greatIdeas",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "govuk-frontend": "^2.2.0"
+  }
 }
