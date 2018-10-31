@@ -52,6 +52,26 @@ RSpec.describe "Users", type: :request do
         expect(response.body).to include('me@me.com')
       end
     end
+
+    describe "toggle admin" do
+
+      it "updates to true if currently false" do
+        user = User.create!(email: 'test@test.com', password: 'change_me', admin: false)
+        post user_toggle_admin_path(user)
+        user.reload
+        expect(user.admin).to be true
+        expect(response).to redirect_to(user_url(user))
+      end
+
+      it "updates to false if currently true" do
+        user = User.create!(email: 'test@test.com', password: 'change_me', admin: true)
+        post user_toggle_admin_path(user)
+        user.reload
+        expect(user.admin).to be false
+        expect(response).to redirect_to(user_url(user))
+      end
+    end
+
   end
 
 end
