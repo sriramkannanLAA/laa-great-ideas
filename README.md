@@ -6,7 +6,7 @@ Great Ideas allows LAA staff to submit their ideas for consideration to the Cont
 ## Setting up a development environment
 
 ### Dependencies
-TBC
+Install [PostgreSQL](https://www.postgresql.org)
 
 ### Setup
 
@@ -16,6 +16,9 @@ bundle install
 ```
 npm install
 ```
+```
+rake db:setup
+rake db:migrate
 
 ### Setup dummy data
 TBC
