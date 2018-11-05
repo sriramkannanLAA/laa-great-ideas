@@ -6,7 +6,7 @@ Great Ideas allows LAA staff to submit their ideas for consideration to the Cont
 ## Setting up a development environment
 
 ### Dependencies
-Install [PostgreSQL](https://www.postgresql.org)
+Install [PostgreSQL](https://www.postgresql.org) 10.5
 
 ### Setup
 
