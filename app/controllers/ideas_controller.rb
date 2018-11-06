@@ -76,8 +76,8 @@ class IdeasController < ApplicationController
       @idea = Idea.find(params[:id]||params[:idea_id]) 
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+   # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement)
+      params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement, :assigned_user_id)
     end
 end
