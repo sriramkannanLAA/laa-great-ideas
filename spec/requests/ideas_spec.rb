@@ -125,5 +125,14 @@ RSpec.describe "Ideas", type: :request do
         expect(response.body).to include '<a href="/users">Users</a>'
       end
     end
+
+    describe "assign an idea" do
+      it "should assign an existing idea" do
+        idea = @admin_user.ideas.create!(title: "An idea")
+        patch idea_path(idea), params: { idea: { assigned_user_id: 1}}
+        idea.reload
+        expect(idea.assigned_user_id) == 1
+      end
+    end
   end
 end
