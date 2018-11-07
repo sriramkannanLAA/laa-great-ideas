@@ -19,4 +19,5 @@ $govuk-fonts-path: "/assets/";
 
 $govuk-global-styles: true;
 
-@import "govuk-frontend/all"
+@import "govuk-frontend/all";
+@import "*";

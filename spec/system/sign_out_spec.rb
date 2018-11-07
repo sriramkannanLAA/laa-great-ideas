@@ -10,7 +10,7 @@ RSpec.describe 'Sign out', type: :system do
       sign_in @user
       visit ideas_path
       click_link 'Sign out'
-      expect(page).to have_content 'Log in'
+      expect(page).to have_content 'Sign in to Great Ideas'
     end
   end
 
