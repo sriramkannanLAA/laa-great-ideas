@@ -37,6 +37,20 @@ To execute Rspec tests and coverage
 rake
 ```
 
+## Running in Docker
+
+Install (Docker Compose)[https://docs.docker.com/compose/]
+
+```
+docker-compose build
+```
+```
+docker-compose up
+```
+```
+docker-compose run app rake db:reset
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome.
