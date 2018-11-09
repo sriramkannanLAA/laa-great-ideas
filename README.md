@@ -12,30 +12,25 @@ Install [PostgreSQL](https://www.postgresql.org) 10.5
 
 ```
 bundle install
-```
-```
+
 npm install
-```
-```
+
 rake db:setup
 rake db:migrate
+```
 
 ### Setup dummy data
 TBC
 
 ### Run the application server
 
-```
-rails server
-```
+`rails server`
 
 ## Testing
 
 To execute Rspec tests and coverage
 
-```
-rake
-```
+`rake`
 
 ## Running in Docker
 
@@ -43,13 +38,12 @@ Install (Docker Compose)[https://docs.docker.com/compose/]
 
 ```
 docker-compose build
-```
-```
+
 docker-compose up
 ```
-```
-docker-compose run app rake db:reset
-```
+In new terminal window:
+
+`docker-compose run app rake db:reset`
 
 ## Contributing
 
