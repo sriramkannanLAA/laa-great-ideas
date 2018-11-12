@@ -35,6 +35,14 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "PATCH /idea" do
+      it "should not show an assigned_user field" do
+        idea = @user.ideas.create!(title: "An idea to assign")
+        get edit_idea_path(idea)
+        expect(response.body).not_to include "assigned_user_id"
+      end
+    end
+
     describe "update an idea" do
       it "should change an existing idea" do
         idea = @user.ideas.create!(title: "An idea")
@@ -77,8 +85,8 @@ RSpec.describe "Ideas", type: :request do
         expect(idea.impact).to_not be_nil 
         expect(idea.involvement).to_not be_nil 
       end
-    end 
-
+    end
+    
     describe "submitting an idea with missing data" do
       it "should not set the submission date on an idea where fields are missing" do
         idea = @user.ideas.create!(
@@ -123,6 +131,23 @@ RSpec.describe "Ideas", type: :request do
       it "should show a users button" do
         get ideas_path
         expect(response.body).to include '<a href="/users">Users</a>'
+      end
+    end
+
+    describe "PATCH /idea" do
+      it "should show an assigned_user field" do
+        idea = @admin_user.ideas.create!(title: "An idea to assign")
+        get edit_idea_path(idea)
+        expect(response.body).to include "assigned_user_id"
+      end
+    end
+
+    describe "assign an idea" do
+      it "should assign an existing idea" do
+        idea = @admin_user.ideas.create!(title: "An idea")
+        patch idea_path(idea), params: { idea: { assigned_user_id: 1}}
+        idea.reload
+        expect(idea.assigned_user_id) == 1
       end
     end
   end

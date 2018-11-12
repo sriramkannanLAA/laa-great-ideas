@@ -1,6 +1,7 @@
 class IdeasController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_idea, only: [:show, :edit, :update, :destroy, :submit]
-
+  
   # GET /ideas
   # GET /ideas.json
   def index
@@ -76,8 +77,12 @@ class IdeasController < ApplicationController
       @idea = Idea.find(params[:id]||params[:idea_id]) 
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+   # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
-      params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement)
+      if current_user.admin?
+        params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement, :assigned_user_id)
+      else
+        params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement)    
+      end
     end
 end

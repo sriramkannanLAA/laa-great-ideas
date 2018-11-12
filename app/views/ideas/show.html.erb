@@ -45,6 +45,11 @@
   <%= @idea.submission_date %>
 </p>
 
+<p>
+  <strong>Assigned user:</strong>
+  <%= @idea.assigned_user&.email %>
+ </p>
+
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>
 <%= button_to 'Submit idea', idea_submit_path(@idea) %>
