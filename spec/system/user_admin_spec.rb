@@ -3,13 +3,13 @@ require "rails_helper"
 RSpec.describe "User admin", type: :system do
 
   before do
-    @admin_user = User.create!(email:'me@me.com', password: 'change_me', admin: true)
+    @admin_user = User.create!(email:'me@justice.gov.uk', password: 'change_me', admin: true)
     sign_in @admin_user
   end
 
   describe "click the toggle admin button when user isn't an admin" do
     it "should set the user to be an admin" do
-      user = User.create!(email: 'admin@admin.com', password: 'change_me', admin: false)
+      user = User.create!(email: 'admin@justice.gov.uk', password: 'change_me', admin: false)
       visit user_path(user)
       click_button "Toggle Admin"
       user.reload
@@ -20,7 +20,7 @@ RSpec.describe "User admin", type: :system do
 
   describe "click the toggle admin button when user is an admin" do
     it "should set the user to not be an admin" do
-      user = User.create!(email: 'admin@admin.com', password: 'change_me', admin: true)
+      user = User.create!(email: 'admin@justice.gov.uk', password: 'change_me', admin: true)
       visit user_path(user)
       click_button "Toggle Admin"
       user.reload
