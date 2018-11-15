@@ -27,7 +27,7 @@ require 'rails_helper'
 RSpec.describe IdeasController, type: :controller do
 
   let(:default_user){
-    User.create!(email:'me@me.com', password: 'change_me')
+    User.create!(email:'me@justice.gov.uk', password: 'change_me')
   }
   # This should return the minimal set of attributes required to create a valid
   # Idea. As you add validations to Idea, be sure to

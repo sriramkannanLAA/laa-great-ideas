@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Ideas submission", type: :system do
 
   before do
-    @user = User.create!(email:'me@me.com', password: 'change_me')
+    @user = User.create!(email:'me@justice.gov.uk', password: 'change_me')
     sign_in @user
   end
 

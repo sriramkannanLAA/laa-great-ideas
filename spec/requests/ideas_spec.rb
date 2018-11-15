@@ -5,7 +5,7 @@ RSpec.describe "Ideas", type: :request do
   describe "As a logged in user" do
 
     before do
-      @user = User.create!(email:'me@me.com', password: 'change_me')
+      @user = User.create!(email:'me@justice.gov.uk', password: 'change_me')
       sign_in @user
     end
 
@@ -114,7 +114,7 @@ RSpec.describe "Ideas", type: :request do
   describe "As an admin user who is logged in" do
 
     before do
-      @admin_user = User.create!(email:'admin@me.com', password: 'change_me', admin: true)
+      @admin_user = User.create!(email:'admin@justice.gov.uk', password: 'change_me', admin: true)
       sign_in @admin_user
     end
 

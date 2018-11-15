@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "Assign idea", type: :system do
 
   before do
-    @user = User.create!(email:'me@me.com', password: 'change_me')
-    @admin_user = User.create!(email:'admin@me.com', password: 'change_me', admin: true)
+    @user = User.create!(email:'me@justice.gov.uk', password: 'change_me')
+    @admin_user = User.create!(email:'admin@justice.gov.uk', password: 'change_me', admin: true)
     @idea =  @user.ideas.create!(
         title: "Submit idea",
         area_of_interest: 0,
