@@ -154,7 +154,7 @@ RSpec.describe "Ideas", type: :request do
     describe "GET /ideas(:view => 'assigned')" do
       it "should show a list of my assigned ideas" do
         @admin_user.ideas.create!(title: "Assign idea", assigned_user_id: @admin_user.id)
-        get ideas_path(:view=>'assigned')
+        get ideas_path(view: "assigned")
         expect(response).to have_http_status(200)
         expect(response.body).to include "Assign idea"
       end

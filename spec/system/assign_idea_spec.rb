@@ -30,12 +30,12 @@ RSpec.describe "Assign idea", type: :system do
       sign_in @admin_user
       visit edit_idea_path(@idea)
       expect(page).to have_select('idea_assigned_user_id')
-      select 'admin@me.com', :from => 'idea_assigned_user_id'
+      select 'admin@justice.gov.uk', from: 'idea_assigned_user_id'
       click_button 'Update Idea'
       @idea.reload
-      expect(@idea.assigned_user_id) == @user.id
+      expect(@idea.assigned_user_id) == @admin_user.id
       expect(page).to have_text('Idea was successfully updated')
-      visit ideas_path(:view => 'assigned')
+      visit ideas_path(view: "assigned")
       expect(page).to have_text('Assign idea')
     end
   end
