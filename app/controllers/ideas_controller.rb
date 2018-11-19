@@ -5,12 +5,15 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    if params[:view].eql?('assigned')
-      @ideas = Idea.where(assigned_user_id: [current_user.id])
-    else
-      @ideas = Idea.all
+    @ideas = case params[:view]
+      when 'assigned'
+        Idea.where(assigned_user_id: [current_user.id])
+      when 'submitted'
+        Idea.where.not(submission_date: [nil, ''])
+      else
+        Idea.all
+      end
     end
-  end
 
   # GET /ideas/1
   # GET /ideas/1.json
