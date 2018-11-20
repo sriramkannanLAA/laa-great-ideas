@@ -29,6 +29,13 @@ RSpec.describe "Users", type: :request do
       end
     end
 
+    describe 'sign out' do
+      it 'signs the user out' do
+        delete destroy_user_session_path
+        expect(controller.current_user).to be_nil
+      end
+    end
+
   end
 
   describe "as an admin user" do

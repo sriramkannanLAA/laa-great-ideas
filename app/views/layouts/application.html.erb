@@ -57,6 +57,9 @@
 
   <div class="govuk-width-container">
     <main class="govuk-main-wrapper " id="main-content" role="main">
+      <% if current_user %>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% end %>
       <%= yield %>
     </main>
   </div>
