@@ -159,5 +159,24 @@ RSpec.describe "Ideas", type: :request do
         expect(response.body).to include "Assign idea"
       end
     end
+
+    describe "GET /ideas(view: 'submitted')" do
+      it 'should show a list of submitted ideas' do
+        @admin_user.ideas.create!(
+          title: 'Submit idea',
+          submission_date: Time.now,
+          area_of_interest: 0,
+          business_area: 0,
+          it_system: 0,
+          idea: 'Idea',
+          benefits: 0,
+          impact: 'Impact',
+          involvement: 0
+        )
+        get ideas_path(view: 'submitted')
+        expect(response).to have_http_status(200)
+        expect(response.body).to include 'Submit idea'
+      end
+    end
   end
 end
