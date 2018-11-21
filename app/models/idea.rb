@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Idea < ApplicationRecord
   belongs_to :user
-  belongs_to :assigned_user, class_name: "User", optional: true
+  belongs_to :assigned_user, class_name: 'User', optional: true
   validates :title, presence: true
   validates :area_of_interest, presence: true, if: :submitted?
   validates :business_area, presence: true, if: :submitted?
@@ -14,77 +16,77 @@ class Idea < ApplicationRecord
     submission_date.present?
   end
 
-  enum benefits: [
-    :better_decision_making,
-    :improved_reputation,
-    :reduced_risk,
-    :time_saved,
-    :cost,
-    :improved_service,
-    :staff_engagement_and_moral
+  enum benefits: %i[
+    better_decision_making
+    improved_reputation
+    reduced_risk
+    time_saved
+    cost
+    improved_service
+    staff_engagement_and_moral
   ]
 
-  enum it_system: [
-    :cclf,
-    :ccms,
-    :ccr,
-    :cis,
-    :cwa,
-    :eforms,
-    :laa_online_portal,
-    :maat,
-    :maat_libra,
-    :management_information,
-    :obiee,
-    :pims,
-    :tv
+  enum it_system: %i[
+    cclf
+    ccms
+    ccr
+    cis
+    cwa
+    eforms
+    laa_online_portal
+    maat
+    maat_libra
+    management_information
+    obiee
+    pims
+    tv
   ]
 
-  enum involvement: [
-    :i_want_to_be_informed,
-    :i_want_to_be_involved,
-    :i_want_to_lead_on_this,
-    :no_involvement
+  enum involvement: %i[
+    i_want_to_be_informed
+    i_want_to_be_involved
+    i_want_to_lead_on_this
+    no_involvement
   ]
 
-  enum business_area: [
-    :exceptional_and_complex_cases, 
-    :crime, 
-    :civil,
-    :delivery_cm_other,
-    :central_commissioning,
-    :public_defender_service,
-    :service_development,
-    :contract_management,
-    :cla,
-    :digital,
-    :assurance,
-    :finance,
-    :planning_and_performance,
-    :ceo_office,
-    :communications,
-    :operational_change_and_improvement,
-    :engagement_and_inclusion,
-    :corporate_centre_correspondence,
-    :central_legal
+  enum business_area: %i[
+    exceptional_and_complex_cases
+    crime
+    civil
+    delivery_cm_other
+    central_commissioning
+    public_defender_service
+    service_development
+    contract_management
+    cla
+    digital
+    assurance
+    finance
+    planning_and_performance
+    ceo_office
+    communications
+    operational_change_and_improvement
+    engagement_and_inclusion
+    corporate_centre_correspondence
+    central_legal
   ]
 
-  enum area_of_interest: [
-    :equality_and_diversity,
-    :it_development,
-    :learning_and_development,
-    :my_business_area,
-    :my_office,
-    :other_business_area,
-    :staff_engagement
+  enum area_of_interest: %i[
+    equality_and_diversity
+    it_development
+    learning_and_development
+    my_business_area
+    my_office
+    other_business_area
+    staff_engagement
   ]
 
-  enum status: [
-    :approved,
-    :investigation,
-    :implementing,
-    :interim_benefits,
-    :benefits_realised,
-    :not_proceeding
+  enum status: %i[
+    approved
+    investigation
+    implementing
+    interim_benefits
+    benefits_realised
+    not_proceeding
   ]
 end

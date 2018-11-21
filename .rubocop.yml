@@ -1,9 +1,34 @@
 inherit_from: .rubocop_todo.yml
+
 AllCops:
-  Include:
-    - Rakefile
-    - config.ru
-    - lib/**/*.rake
+  TargetRubyVersion: 2.5.1
   Exclude:
-    - db/schema.rb
-    - vendor/**/*
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'bin/**/*'
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/MethodLength:
+  Max: 30
+  Exclude:
+    - 'db/migrate/*'
+
+Style/Documentation:
+  Exclude:
+    - '**/*'
+
+Metrics/LineLength:
+  Max: 130
+  Exclude:
+    - 'config/initializers/devise.rb'

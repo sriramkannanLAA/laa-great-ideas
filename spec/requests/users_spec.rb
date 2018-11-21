@@ -1,29 +1,30 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-
-  let(:default_user){
+RSpec.describe 'Users', type: :request do
+  let(:default_user) do
     User.create!(email: 'me@justice.gov.uk', password: 'change_me')
-  }
+  end
 
-  let(:admin_user){
+  let(:admin_user) do
     User.create!(email: 'admin@justice.gov.uk', password: 'change_me', admin: true)
-  }
+  end
 
-  describe "as a default user" do
+  describe 'as a default user' do
     before do
       sign_in default_user
     end
 
-    describe "requesting the users index" do
-      it "redirects to ideas page" do
+    describe 'requesting the users index' do
+      it 'redirects to ideas page' do
         get users_path
         expect(response).to redirect_to(ideas_url)
       end
     end
-    
-    describe "requesting the show page" do
-      it "redirects to the ideas page" do
+
+    describe 'requesting the show page' do
+      it 'redirects to the ideas page' do
         get user_path(default_user)
         expect(response).to redirect_to(ideas_url)
       end
@@ -35,16 +36,15 @@ RSpec.describe "Users", type: :request do
         expect(controller.current_user).to be_nil
       end
     end
-
   end
 
-  describe "as an admin user" do
+  describe 'as an admin user' do
     before do
       sign_in admin_user
     end
 
-    describe "requesting the users index" do
-      it "returns a success response" do
+    describe 'requesting the users index' do
+      it 'returns a success response' do
         get users_path(default_user)
         expect(response).to be_successful
         expect(response.body).to include('me@justice.gov.uk')
@@ -52,17 +52,16 @@ RSpec.describe "Users", type: :request do
       end
     end
 
-    describe "requesting the show page" do
-      it "returns a success response" do
+    describe 'requesting the show page' do
+      it 'returns a success response' do
         get user_path(default_user)
         expect(response).to be_successful
         expect(response.body).to include('me@justice.gov.uk')
       end
     end
 
-    describe "toggle admin" do
-
-      it "updates to true if currently false" do
+    describe 'toggle admin' do
+      it 'updates to true if currently false' do
         user = User.create!(email: 'test@justice.gov.uk', password: 'change_me', admin: false)
         post user_toggle_admin_path(user)
         user.reload
@@ -70,7 +69,7 @@ RSpec.describe "Users", type: :request do
         expect(response).to redirect_to(user_url(user))
       end
 
-      it "updates to false if currently true" do
+      it 'updates to false if currently true' do
         user = User.create!(email: 'test@justice.gov.uk', password: 'change_me', admin: true)
         post user_toggle_admin_path(user)
         user.reload
@@ -78,7 +77,5 @@ RSpec.describe "Users", type: :request do
         expect(response).to redirect_to(user_url(user))
       end
     end
-
   end
-
 end

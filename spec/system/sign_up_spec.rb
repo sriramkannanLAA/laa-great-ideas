@@ -1,9 +1,10 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-RSpec.describe "Sign up", type: :system do
+require 'rails_helper'
 
-  describe "signing up as a new user" do
-    it "should allow .justice.gov.uk email addresses" do
+RSpec.describe 'Sign up', type: :system do
+  describe 'signing up as a new user' do
+    it 'should allow .justice.gov.uk email addresses' do
       visit new_user_registration_path
       fill_in 'user_email', with: 'user@justice.gov.uk'
       fill_in 'user_password', with: 'change_me'
@@ -12,7 +13,7 @@ RSpec.describe "Sign up", type: :system do
       expect(page).to have_content 'Welcome! You have signed up successfully.'
     end
 
-    it "should allow digital.justice.gov.uk email addresses" do
+    it 'should allow digital.justice.gov.uk email addresses' do
       visit new_user_registration_path
       fill_in 'user_email', with: 'user@digital.justice.gov.uk'
       fill_in 'user_password', with: 'change_me'
@@ -21,7 +22,7 @@ RSpec.describe "Sign up", type: :system do
       expect(page).to have_content 'Welcome! You have signed up successfully.'
     end
 
-    it "should not allow non justice.gov.uk email addresses" do
+    it 'should not allow non justice.gov.uk email addresses' do
       visit new_user_registration_path
       fill_in 'user_email', with: 'user@gmail.com'
       fill_in 'user_password', with: 'change_me'
