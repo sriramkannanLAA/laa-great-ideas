@@ -87,7 +87,7 @@ class IdeasController < ApplicationController
    # Never trust parameters from the scary internet, only allow the white list through.
     def idea_params
       if current_user.admin?
-        params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement, :assigned_user_id)
+        params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement, :assigned_user_id, :status)
       else
         params.require(:idea).permit(:area_of_interest, :business_area, :it_system, :title, :idea, :benefits, :impact, :involvement)    
       end

@@ -78,4 +78,13 @@ class Idea < ApplicationRecord
     :other_business_area,
     :staff_engagement
   ]
+
+  enum status: [
+    :approved,
+    :investigation,
+    :implementing,
+    :interim_benefits,
+    :benefits_realised,
+    :not_proceeding
+  ]
 end
