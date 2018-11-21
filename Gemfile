@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.8'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
+gem 'govuk_notify_rails'
 
 # Fix CVE-2018-16468 More information
 gem "loofah", ">= 2.2.3"
