@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :require_admin
-  before_action :set_user, only: [:show, :toggle_admin]
+  before_action :set_user, only: %i[show toggle_admin]
 
   def index
     @users = User.all
   end
 
-  def show
-  end
+  def show; end
 
   def toggle_admin
     @user.admin = !@user.admin
@@ -18,13 +19,12 @@ class UsersController < ApplicationController
   private
 
   def require_admin
-    unless current_user.admin?
-      redirect_to ideas_path, notice: 'You are not authorized to view users'
-    end
+    return if current_user.admin?
+
+    redirect_to ideas_path, notice: 'You are not authorized to view users'
   end
 
   def set_user
-    @user = User.find(params[:id]||params[:user_id])
+    @user = User.find(params[:id] || params[:user_id])
   end
-
 end

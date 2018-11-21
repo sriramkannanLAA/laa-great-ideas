@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Idea, type: :model do
-  
-  describe "relations" do
+  describe 'relations' do
     it { should belong_to(:user) }
   end
 
-  describe "validations" do
-    context "if submitted" do
+  describe 'validations' do
+    context 'if submitted' do
       before { allow(subject).to receive(:submitted?).and_return(true) }
       it { should validate_presence_of(:title) }
       it { should validate_presence_of(:area_of_interest) }
@@ -18,7 +19,7 @@ RSpec.describe Idea, type: :model do
       it { should validate_presence_of(:involvement) }
     end
 
-    context "if not submitted it" do
+    context 'if not submitted it' do
       before { allow(subject).to receive(:submitted?).and_return(false) }
       it { should validate_presence_of(:title) }
       it { should_not validate_presence_of(:area_of_interest) }
@@ -30,7 +31,7 @@ RSpec.describe Idea, type: :model do
     end
   end
 
-  describe "fields which should be enums" do
+  describe 'fields which should be enums' do
     it { should define_enum_for(:benefits) }
     it { should define_enum_for(:involvement) }
     it { should define_enum_for(:it_system) }
