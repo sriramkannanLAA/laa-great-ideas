@@ -43,6 +43,14 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "PATCH /idea" do
+      it "should not show a status field" do
+        idea = @user.ideas.create!(title: "An idea to update")
+        get edit_idea_path(idea)
+        expect(response.body).not_to include "status"
+      end
+    end
+
     describe "update an idea" do
       it "should change an existing idea" do
         idea = @user.ideas.create!(title: "An idea")
@@ -142,6 +150,14 @@ RSpec.describe "Ideas", type: :request do
       end
     end
 
+    describe "PATCH /idea" do
+      it "should show a status field" do
+        idea = @admin_user.ideas.create!(title: "An idea to update")
+        get edit_idea_path(idea)
+        expect(response.body).to include "status"
+      end
+    end
+
     describe "assign an idea" do
       it "should assign an existing idea" do
         idea = @admin_user.ideas.create!(title: "An idea")
@@ -157,6 +173,15 @@ RSpec.describe "Ideas", type: :request do
         get ideas_path(view: "assigned")
         expect(response).to have_http_status(200)
         expect(response.body).to include "Assign idea"
+      end
+    end
+
+    describe "update the status of an idea" do
+      it "should update the status of an idea" do
+        idea = @admin_user.ideas.create!(title: "An idea to update")
+        patch idea_path(idea), params: { idea: { status: 'approved'}}
+        idea.reload
+        expect(idea.status) == 'approved'
       end
     end
 
