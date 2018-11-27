@@ -82,6 +82,7 @@ class Idea < ApplicationRecord
   ]
 
   enum status: %i[
+    awaiting_approval
     approved
     investigation
     implementing

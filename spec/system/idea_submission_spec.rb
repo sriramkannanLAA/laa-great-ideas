@@ -24,6 +24,7 @@ RSpec.describe 'Ideas submission', type: :system do
       click_button 'Submit idea'
       idea.reload
       expect(idea.submission_date).to_not be_nil
+      expect(idea.status).to eq 'awaiting_approval'
       expect(page).to have_text('Idea was successfully submitted.')
     end
   end
