@@ -84,6 +84,7 @@ RSpec.describe 'Ideas', type: :request do
         post idea_submit_path(idea)
         idea.reload
         expect(idea.submission_date).to_not be_nil
+        expect(idea.status).to eq 'awaiting_approval'
         expect(idea.area_of_interest).to_not be_nil
         expect(idea.business_area).to_not be_nil
         expect(idea.it_system).to_not be_nil

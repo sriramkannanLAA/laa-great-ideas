@@ -56,6 +56,7 @@ class IdeasController < ApplicationController
 
   def submit
     @idea.submission_date = Time.now
+    @idea.status = 0
     if @idea.save
       redirect_to @idea, notice: 'Idea was successfully submitted.'
     else
@@ -82,7 +83,8 @@ class IdeasController < ApplicationController
         :benefits,
         :impact,
         :involvement,
-        :assigned_user_id, :status
+        :assigned_user_id,
+        :status
       )
     else
       params.require(:idea).permit(
@@ -93,7 +95,8 @@ class IdeasController < ApplicationController
         :idea,
         :benefits,
         :impact,
-        :involvement
+        :involvement,
+        :status
       )
     end
   end
