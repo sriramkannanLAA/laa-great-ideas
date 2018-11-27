@@ -83,7 +83,7 @@ class IdeasController < ApplicationController
         :benefits,
         :impact,
         :involvement,
-        :assigned_user_id, 
+        :assigned_user_id,
         :status
       )
     else
