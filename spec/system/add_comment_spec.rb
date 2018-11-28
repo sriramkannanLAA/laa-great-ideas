@@ -32,7 +32,7 @@ RSpec.describe 'Add a comment', type: :system do
 
     describe 'creating a comment' do
       it 'can create and save a comment' do
-        visit new_comment_path(@idea)
+        visit new_idea_comment_path(@idea)
         expect(page).to have_text('New Comment')
         fill_in('comment_body', with: 'Test comment')
         click_on 'Create Comment'
@@ -40,7 +40,7 @@ RSpec.describe 'Add a comment', type: :system do
       end
 
       it 'does not create a comment when blank' do
-        visit new_comment_path(@idea)
+        visit new_idea_comment_path(@idea)
         expect(page).to have_text('New Comment')
         click_on 'Create Comment'
         expect(page).to have_text('prohibited this comment from being saved')
@@ -49,8 +49,8 @@ RSpec.describe 'Add a comment', type: :system do
 
     describe 'editing a comment' do
       it 'can edit and save a comment' do
-        comment1 = @user.comments.create!(body: 'Comment 1', idea_id: @idea.id)
-        visit edit_comment_path(comment1)
+        comment1 = @idea.comments.create!(body: 'Comment 1', user: @user)
+        visit edit_idea_comment_path(comment1.idea, comment1)
         expect(page).to have_text('Comment 1')
         fill_in('comment_body', with: 'Test comment')
         click_on 'Update Comment'
@@ -58,8 +58,8 @@ RSpec.describe 'Add a comment', type: :system do
       end
 
       it 'does not edit a comment when blank' do
-        comment1 = @user.comments.create!(body: 'Comment 1', idea_id: @idea.id)
-        visit edit_comment_path(comment1)
+        comment1 = @idea.comments.create!(body: 'Comment 1', user: @user)
+        visit edit_idea_comment_path(comment1.idea, comment1)
         expect(page).to have_text('Comment 1')
         fill_in('comment_body', with: '')
         click_on 'Update Comment'

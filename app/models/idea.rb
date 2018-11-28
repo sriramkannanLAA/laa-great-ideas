@@ -3,7 +3,7 @@
 class Idea < ApplicationRecord
   belongs_to :user
   belongs_to :assigned_user, class_name: 'User', optional: true
-  has_many :comments
+  has_many :comments, dependent: :destroy
   validates :title, presence: true
   validates :area_of_interest, presence: true, if: :submitted?
   validates :business_area, presence: true, if: :submitted?

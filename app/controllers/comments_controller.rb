@@ -3,24 +3,24 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_comment, only: %i[show edit update destroy]
+  before_action :set_idea, only: %i[new create show edit update destroy]
 
   # GET /comments
   def index
-    @comments = Comment.all
+    @comments = Comment.where('idea_id = ?', params[:idea_id])
   end
 
   def show; end
 
   def new
-    @comment = Comment.new
-    @idea_id = params[:idea_id]
+    @comment = @idea.comments.build
   end
 
   def edit; end
 
   def update
     if @comment.update(comment_params)
-      redirect_to @comment, notice: 'Comment was successfully updated.'
+      redirect_to idea_comment_path(@comment.idea, @comment), notice: 'Comment was successfully updated.'
     else
       render :edit
     end
@@ -32,23 +32,26 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = current_user.comments.new(comment_params)
+    @comment = @idea.comments.build(comment_params)
+    @comment.user = current_user
     if @comment.save
-      redirect_to @comment, notice: 'Comment created'
+      redirect_to idea_comment_path(@comment.idea, @comment), notice: 'Comment created'
     else
       render :new
     end
   end
 
   def set_comment
-    @comment = Comment.find(params[:id] || :comment_id)
-    @idea_id = @comment.idea_id || params[:idea_id]
+    @comment = Comment.find(params[:id])
+  end
+
+  def set_idea
+    @idea = Idea.find(params[:idea_id])
   end
 
   def comment_params
     params.require(:comment).permit(
-      :body,
-      :idea_id
+      :body
     )
   end
 end
