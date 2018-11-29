@@ -166,7 +166,7 @@ RSpec.describe 'Ideas', type: :request do
       end
     end
 
-    describe "GET /ideas(:view => 'assigned')" do
+    describe "GET /ideas(view: 'assigned')" do
       it 'should show a list of my assigned ideas' do
         @admin_user.ideas.create!(title: 'Assign idea', assigned_user_id: @admin_user.id)
         get ideas_path(view: 'assigned')
