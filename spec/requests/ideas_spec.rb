@@ -3,16 +3,22 @@
 require 'rails_helper'
 
 RSpec.describe 'Ideas', type: :request do
+  let(:default_user) { build :user }
+  let(:admin_user) { build :admin }
+  let(:idea) { create :idea }
+  let(:idea2) { create :idea, title: 'New idea2' }
+  let(:complete_idea) { create :complete_idea }
+  let(:submitted_idea) { create :submitted_idea }
+
   describe 'As a logged in user' do
     before do
-      @user = User.create!(email: 'me@justice.gov.uk', password: 'change_me')
-      sign_in @user
+      sign_in default_user
     end
 
     describe 'GET /ideas' do
       it 'should show a list of ideas' do
-        @user.ideas.create!(title: 'New idea1')
-        @user.ideas.create!(title: 'New idea2')
+        idea
+        idea2
         get ideas_path
         expect(response).to have_http_status(200)
         expect(response.body).to include 'New idea1'
@@ -37,7 +43,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'PATCH /idea' do
       it 'should not show an assigned_user field' do
-        idea = @user.ideas.create!(title: 'An idea to assign')
         get edit_idea_path(idea)
         expect(response.body).not_to include 'assigned_user_id'
       end
@@ -45,7 +50,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'PATCH /idea' do
       it 'should not show a status field' do
-        idea = @user.ideas.create!(title: 'An idea to update')
         get edit_idea_path(idea)
         expect(response.body).not_to include 'status'
       end
@@ -53,7 +57,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'update an idea' do
       it 'should change an existing idea' do
-        idea = @user.ideas.create!(title: 'An idea')
         patch idea_path(idea), params: { idea: { title: 'New Test title' } }
         idea.reload
         expect(idea.title).to eq 'New Test title'
@@ -62,7 +65,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'delete an idea' do
       it 'should delete an existing idea' do
-        idea = @user.ideas.create!(title: 'An idea to delete')
         delete idea_path(idea)
         expect(Idea.exists?(idea.id)).to eq false
       end
@@ -70,39 +72,23 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'submitting an idea with all data' do
       it 'should set the submission date on an idea and all fields present' do
-        idea = @user.ideas.create!(
-          title: 'Submit idea',
-          submission_date: Time.now,
-          area_of_interest: 0,
-          business_area: 0,
-          it_system: 0,
-          idea: 'Idea',
-          benefits: 0,
-          impact: 'Impact',
-          involvement: 0
-        )
-        post idea_submit_path(idea)
-        idea.reload
-        expect(idea.submission_date).to_not be_nil
-        expect(idea.status).to eq 'awaiting_approval'
-        expect(idea.area_of_interest).to_not be_nil
-        expect(idea.business_area).to_not be_nil
-        expect(idea.it_system).to_not be_nil
-        expect(idea.title).to_not be_nil
-        expect(idea.idea).to_not be_nil
-        expect(idea.benefits).to_not be_nil
-        expect(idea.impact).to_not be_nil
-        expect(idea.involvement).to_not be_nil
+        post idea_submit_path(complete_idea)
+        complete_idea.reload
+        expect(complete_idea.submission_date).to_not be_nil
+        expect(complete_idea.status).to eq 'awaiting_approval'
+        expect(complete_idea.area_of_interest).to_not be_nil
+        expect(complete_idea.business_area).to_not be_nil
+        expect(complete_idea.it_system).to_not be_nil
+        expect(complete_idea.title).to_not be_nil
+        expect(complete_idea.idea).to_not be_nil
+        expect(complete_idea.benefits).to_not be_nil
+        expect(complete_idea.impact).to_not be_nil
+        expect(complete_idea.involvement).to_not be_nil
       end
     end
 
     describe 'submitting an idea with missing data' do
       it 'should not set the submission date on an idea where fields are missing' do
-        idea = @user.ideas.create!(
-          title: 'Submit idea',
-          area_of_interest: 0,
-          business_area: 0
-        )
         post idea_submit_path(idea)
         expect(idea.submission_date).to be_nil
         expect(response.body).to include('prohibited this idea from being saved:')
@@ -121,14 +107,13 @@ RSpec.describe 'Ideas', type: :request do
 
   describe 'As an admin user who is logged in' do
     before do
-      @admin_user = User.create!(email: 'admin@justice.gov.uk', password: 'change_me', admin: true)
-      sign_in @admin_user
+      sign_in admin_user
     end
 
     describe 'GET /ideas' do
       it 'should show a list of ideas' do
-        @admin_user.ideas.create!(title: 'New idea1')
-        @admin_user.ideas.create!(title: 'New idea2')
+        idea
+        idea2
         get ideas_path
         expect(response).to have_http_status(200)
         expect(response.body).to include 'New idea1'
@@ -143,7 +128,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'PATCH /idea' do
       it 'should show an assigned_user field' do
-        idea = @admin_user.ideas.create!(title: 'An idea to assign')
         get edit_idea_path(idea)
         expect(response.body).to include 'assigned_user_id'
       end
@@ -151,7 +135,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'PATCH /idea' do
       it 'should show a status field' do
-        idea = @admin_user.ideas.create!(title: 'An idea to update')
         get edit_idea_path(idea)
         expect(response.body).to include 'status'
       end
@@ -159,7 +142,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'assign an idea' do
       it 'should assign an existing idea' do
-        idea = @admin_user.ideas.create!(title: 'An idea')
         patch idea_path(idea), params: { idea: { assigned_user_id: 1 } }
         idea.reload
         expect(idea.assigned_user_id) == 1
@@ -168,7 +150,7 @@ RSpec.describe 'Ideas', type: :request do
 
     describe "GET /ideas(view: 'assigned')" do
       it 'should show a list of my assigned ideas' do
-        @admin_user.ideas.create!(title: 'Assign idea', assigned_user_id: @admin_user.id)
+        create :idea, title: 'Assign idea', assigned_user_id: admin_user.id
         get ideas_path(view: 'assigned')
         expect(response).to have_http_status(200)
         expect(response.body).to include 'Assign idea'
@@ -177,7 +159,6 @@ RSpec.describe 'Ideas', type: :request do
 
     describe 'update the status of an idea' do
       it 'should update the status of an idea' do
-        idea = @admin_user.ideas.create!(title: 'An idea to update')
         patch idea_path(idea), params: { idea: { status: 'approved' } }
         idea.reload
         expect(idea.status) == 'approved'
@@ -186,20 +167,10 @@ RSpec.describe 'Ideas', type: :request do
 
     describe "GET /ideas(view: 'submitted')" do
       it 'should show a list of submitted ideas' do
-        @admin_user.ideas.create!(
-          title: 'Submit idea',
-          submission_date: Time.now,
-          area_of_interest: 0,
-          business_area: 0,
-          it_system: 0,
-          idea: 'Idea',
-          benefits: 0,
-          impact: 'Impact',
-          involvement: 0
-        )
+        submitted_idea
         get ideas_path(view: 'submitted')
         expect(response).to have_http_status(200)
-        expect(response.body).to include 'Submit idea'
+        expect(response.body).to include 'New idea1'
       end
     end
   end
