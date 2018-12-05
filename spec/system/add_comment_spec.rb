@@ -3,28 +3,18 @@
 require 'rails_helper'
 
 RSpec.describe 'Add a comment', type: :system do
-  before do
-    @user = User.create!(email: 'me@justice.gov.uk', password: 'change_me')
-    @idea = @user.ideas.create!(
-      title: 'Assign idea',
-      area_of_interest: 0,
-      business_area: 0,
-      it_system: 0,
-      idea: 'Idea',
-      benefits: 0,
-      impact: 'Impact',
-      involvement: 0
-    )
-  end
+  let(:default_user) { create :user }
+  let(:idea) { create :idea }
+  let(:comment) { create :comment }
 
   context 'a logged in user' do
     before do
-      sign_in @user
+      sign_in default_user
     end
 
     describe 'on the idea show page' do
       it 'can click an add comment button' do
-        visit idea_path(@idea)
+        visit idea_path(idea)
         click_on 'Add Comment'
         expect(page).to have_text('New Comment')
       end
@@ -32,7 +22,7 @@ RSpec.describe 'Add a comment', type: :system do
 
     describe 'creating a comment' do
       it 'can create and save a comment' do
-        visit new_idea_comment_path(@idea)
+        visit new_idea_comment_path(idea)
         expect(page).to have_text('New Comment')
         fill_in('comment_body', with: 'Test comment')
         click_on 'Create Comment'
@@ -40,7 +30,7 @@ RSpec.describe 'Add a comment', type: :system do
       end
 
       it 'does not create a comment when blank' do
-        visit new_idea_comment_path(@idea)
+        visit new_idea_comment_path(idea)
         expect(page).to have_text('New Comment')
         click_on 'Create Comment'
         expect(page).to have_text('prohibited this comment from being saved')
@@ -49,8 +39,7 @@ RSpec.describe 'Add a comment', type: :system do
 
     describe 'editing a comment' do
       it 'can edit and save a comment' do
-        comment1 = @idea.comments.create!(body: 'Comment 1', user: @user)
-        visit edit_idea_comment_path(comment1.idea, comment1)
+        visit edit_idea_comment_path(comment.idea, comment)
         expect(page).to have_text('Comment 1')
         fill_in('comment_body', with: 'Test comment')
         click_on 'Update Comment'
@@ -58,8 +47,7 @@ RSpec.describe 'Add a comment', type: :system do
       end
 
       it 'does not edit a comment when blank' do
-        comment1 = @idea.comments.create!(body: 'Comment 1', user: @user)
-        visit edit_idea_comment_path(comment1.idea, comment1)
+        visit edit_idea_comment_path(comment.idea, comment)
         expect(page).to have_text('Comment 1')
         fill_in('comment_body', with: '')
         click_on 'Update Comment'

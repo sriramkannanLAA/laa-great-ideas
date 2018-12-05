@@ -3,13 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-  let(:default_user) do
-    User.create!(email: 'me@justice.gov.uk', password: 'change_me')
-  end
-
-  let(:admin_user) do
-    User.create!(email: 'admin@justice.gov.uk', password: 'change_me', admin: true)
-  end
+  let(:default_user) { create :user }
+  let(:admin_user) { create :admin }
 
   describe 'as a default user' do
     before do
@@ -62,19 +57,17 @@ RSpec.describe 'Users', type: :request do
 
     describe 'toggle admin' do
       it 'updates to true if currently false' do
-        user = User.create!(email: 'test@justice.gov.uk', password: 'change_me', admin: false)
-        post user_toggle_admin_path(user)
-        user.reload
-        expect(user.admin).to be true
-        expect(response).to redirect_to(user_url(user))
+        post user_toggle_admin_path(default_user)
+        default_user.reload
+        expect(default_user.admin).to be true
+        expect(response).to redirect_to(user_url(default_user))
       end
 
       it 'updates to false if currently true' do
-        user = User.create!(email: 'test@justice.gov.uk', password: 'change_me', admin: true)
-        post user_toggle_admin_path(user)
-        user.reload
-        expect(user.admin).to be false
-        expect(response).to redirect_to(user_url(user))
+        post user_toggle_admin_path(admin_user)
+        admin_user.reload
+        expect(admin_user.admin).to be false
+        expect(response).to redirect_to(user_url(admin_user))
       end
     end
   end

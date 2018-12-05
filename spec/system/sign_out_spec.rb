@@ -3,13 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Sign out', type: :system do
-  before do
-    @user = User.create!(email: 'me@justice.gov.uk', password: 'change_me')
-  end
+  let(:default_user) { create :user }
 
   describe 'as a logged in user' do
     it 'the sign out link should sign the user out' do
-      sign_in @user
+      sign_in default_user
       visit ideas_path
       click_link 'Sign out'
       expect(page).to have_content 'Sign in to Great Ideas'
