@@ -42,16 +42,12 @@ RSpec.describe 'Ideas', type: :request do
     end
 
     describe 'PATCH /idea' do
-      it 'should not show an assigned_user field' do
+      it 'should not show admin only fields' do
         get edit_idea_path(idea)
         expect(response.body).not_to include 'assigned_user_id'
-      end
-    end
-
-    describe 'PATCH /idea' do
-      it 'should not show a status field' do
-        get edit_idea_path(idea)
         expect(response.body).not_to include 'status'
+        expect(response.body).not_to include 'participation_level'
+        expect(response.body).not_to include 'review_date'
       end
     end
 
@@ -127,24 +123,24 @@ RSpec.describe 'Ideas', type: :request do
     end
 
     describe 'PATCH /idea' do
-      it 'should show an assigned_user field' do
+      it 'should show admin only fields' do
         get edit_idea_path(idea)
         expect(response.body).to include 'assigned_user_id'
-      end
-    end
-
-    describe 'PATCH /idea' do
-      it 'should show a status field' do
-        get edit_idea_path(idea)
         expect(response.body).to include 'status'
+        expect(response.body).to include 'participation_level'
+        expect(response.body).to include 'review_date'
       end
     end
 
-    describe 'assign an idea' do
-      it 'should assign an existing idea' do
-        patch idea_path(idea), params: { idea: { assigned_user_id: 1 } }
+    describe 'update admin fields' do
+      it 'should update existing idea' do
+        patch idea_path(idea), params: { idea: { assigned_user_id: 1, status: 'approved',
+                                                 participation_level: 'assist', review_date: Date.today } }
         idea.reload
-        expect(idea.assigned_user_id) == 1
+        expect(idea.assigned_user_id).to eq 1
+        expect(idea.status).to eq 'approved'
+        expect(idea.participation_level).to eq 'assist'
+        expect(idea.review_date).to eq Date.today
       end
     end
 
@@ -154,14 +150,6 @@ RSpec.describe 'Ideas', type: :request do
         get ideas_path(view: 'assigned')
         expect(response).to have_http_status(200)
         expect(response.body).to include 'Assign idea'
-      end
-    end
-
-    describe 'update the status of an idea' do
-      it 'should update the status of an idea' do
-        patch idea_path(idea), params: { idea: { status: 'approved' } }
-        idea.reload
-        expect(idea.status) == 'approved'
       end
     end
 

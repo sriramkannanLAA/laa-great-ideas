@@ -58,8 +58,18 @@
     </div>
 
     <div class="field">
+      <%= form.label :participation_level %>
+      <%= form.select :participation_level, enum_to_select(Idea.participation_levels) %>
+    </div>
+
+    <div class="field">
       <%= form.label :status %>
       <%= form.select :status, enum_to_select(Idea.statuses) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :review_date %>
+      <%= form.date_select :review_date %>
     </div>
   <% end %>
 
