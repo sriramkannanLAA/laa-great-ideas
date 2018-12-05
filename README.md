@@ -20,7 +20,10 @@ rake db:migrate
 ```
 
 ### Setup dummy data
-TBC
+`rake db:seed`
+
+### Reset database and seed data
+`rake db:reset`
 
 ### Run the application server
 
