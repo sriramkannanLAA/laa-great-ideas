@@ -56,7 +56,7 @@ class IdeasController < ApplicationController
 
   def submit
     @idea.submission_date = Time.now
-    @idea.status = 0
+    @idea.status = Idea.statuses[:awaiting_approval]
     if @idea.save
       redirect_to @idea, notice: 'Idea was successfully submitted.'
     else
@@ -84,7 +84,9 @@ class IdeasController < ApplicationController
         :impact,
         :involvement,
         :assigned_user_id,
-        :status
+        :participation_level,
+        :status,
+        :review_date
       )
     else
       params.require(:idea).permit(

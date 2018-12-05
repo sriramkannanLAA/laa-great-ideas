@@ -91,4 +91,9 @@ class Idea < ApplicationRecord
     benefits_realised
     not_proceeding
   ]
+
+  enum participation_level: %i[
+    assist
+    lead
+  ]
 end

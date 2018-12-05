@@ -51,8 +51,18 @@
 </p>
 
 <p>
+  <strong>Participation level:</strong>
+  <%= @idea.participation_level %>
+</p>
+
+<p>
   <strong>Status:</strong>
   <%= @idea.status %>
+</p>
+
+<p>
+  <strong>Review date:</strong>
+  <%= @idea.review_date %>
 </p>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
