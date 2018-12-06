@@ -43,18 +43,18 @@ jobs: # a collection of steps
       # Only necessary if app uses webpacker or yarn in some other way
       - restore_cache:
           keys:
-            - rails-demo-yarn-{{ checksum "yarn.lock" }}
-            - rails-demo-yarn-
+            - rails-demo-npm-{{ checksum "package-lock.json" }}
+            - rails-demo-npm-
 
       - run:
-          name: Yarn Install
-          command: yarn install --cache-folder ~/.cache/yarn
+          name: npm Install
+          command: npm install --cache-folder ~/.cache/npm
 
       # Store yarn / webpacker cache
       - save_cache:
-          key: rails-demo-yarn-{{ checksum "yarn.lock" }}
+          key: rails-demo-npm-{{ checksum "package-lock.json" }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache/npm
 
       - run:
           name: Wait for DB
