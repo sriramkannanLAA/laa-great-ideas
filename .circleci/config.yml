@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build: # A job called "build" within the pipeline.
+    docker: # run the steps with Docker
+      - image: circleci/ruby:2.5.3-node-browsers
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      - run:
+          name: Say hello
+          command: echo "Hello world"
