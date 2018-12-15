@@ -22,6 +22,9 @@ jobs:
       - run:
           name: Setup Database
           command: bundle exec rake db:create db:schema:load
+      - run:
+          name: Run the linter
+          command: bundle exec rubocop
 
 
       #- run:
