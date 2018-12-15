@@ -25,6 +25,9 @@ jobs:
       - run:
           name: Run the linter
           command: bundle exec rubocop
+      - run:
+          name: Run tests
+          command: bundle exec rspec
 
 
       #- run:
