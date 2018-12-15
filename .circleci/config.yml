@@ -19,6 +19,9 @@ jobs:
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
             npm install
+      - run:
+          name: Setup Database
+          command: bundle exec rake db:create db:schema:load
 
 
       #- run:
