@@ -15,6 +15,7 @@ jobs:
     steps:
       - checkout
       # Install dependencies
+      - bundle check --path vendor/bundle
       - bundle install --jobs=4 --retry=3 --path vendor/bundle
       - npm install
 
