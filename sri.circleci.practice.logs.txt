@@ -1,0 +1,1594 @@
+Last login: Sat Dec 15 15:35:28 on console
+MOJL0451LM:~ sriramkannan$ cd sri
+MOJL0451LM:sri sriramkannan$ ls -lrt
+total 0
+drwxr-xr-x   7 sriramkannan  staff   224 18 Apr  2018 cpractice
+drwxr-xr-x   4 sriramkannan  staff   128 12 Jul 13:54 jtest
+drwxr-xr-x  46 sriramkannan  staff  1472 29 Jul 14:10 pytest
+drwxr-xr-x   3 sriramkannan  staff    96  9 Nov 10:29 gitpractice
+drwxr-xr-x  45 sriramkannan  staff  1440 21 Nov 11:26 rbkoans
+drwxr-xr-x@ 46 sriramkannan  staff  1472 21 Nov 11:27 koans
+drwxr-xr-x  14 sriramkannan  staff   448 26 Nov 14:14 rbtest
+drwxr-xr-x   4 sriramkannan  staff   128 14 Dec 20:00 git
+MOJL0451LM:sri sriramkannan$ cd git
+MOJL0451LM:git sriramkannan$ ls -lrt
+total 0
+drwxr-xr-x  4 sriramkannan  staff  128 14 Dec 20:00 circlecipractice
+MOJL0451LM:git sriramkannan$ cd circlecipractice/
+MOJL0451LM:circlecipractice sriramkannan$ ls -lrt
+total 0
+drwxr-xr-x  30 sriramkannan  staff  960 10 Dec 11:32 laa-great-ideas
+MOJL0451LM:circlecipractice sriramkannan$ 
+MOJL0451LM:circlecipractice sriramkannan$ 
+MOJL0451LM:circlecipractice sriramkannan$ cd laa-great-ideas/
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 bin
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lart
+total 120
+-rw-r--r--   1 sriramkannan  staff   730 10 Dec 11:30 .gitignore
+-rw-r--r--   1 sriramkannan  staff    22 10 Dec 11:30 .rspec
+-rw-r--r--   1 sriramkannan  staff   493 10 Dec 11:30 .rubocop.yml
+-rw-r--r--   1 sriramkannan  staff   390 10 Dec 11:30 .rubocop_todo.yml
+-rw-r--r--   1 sriramkannan  staff     6 10 Dec 11:30 .ruby-version
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 bin
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x  30 sriramkannan  staff   960 10 Dec 11:32 .
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:33 .circleci
+drwxr-xr-x  13 sriramkannan  staff   416 10 Dec 13:40 .git
+drwxr-xr-x   4 sriramkannan  staff   128 14 Dec 20:00 ..
+MOJL0451LM:laa-great-ideas sriramkannan$ date
+Sat 15 Dec 2018 16:04:33 GMT
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ cd .circleci/
+MOJL0451LM:.circleci sriramkannan$ ls
+config.yml
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build: # A job called "build" within the pipeline.
+    docker: # run the steps with Docker
+      - image: circleci/ruby:2.5.3-node-browsers
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      - run:
+          name: Say hello
+          command: echo "Hello world"
+
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lart
+total 120
+-rw-r--r--   1 sriramkannan  staff   730 10 Dec 11:30 .gitignore
+-rw-r--r--   1 sriramkannan  staff    22 10 Dec 11:30 .rspec
+-rw-r--r--   1 sriramkannan  staff   493 10 Dec 11:30 .rubocop.yml
+-rw-r--r--   1 sriramkannan  staff   390 10 Dec 11:30 .rubocop_todo.yml
+-rw-r--r--   1 sriramkannan  staff     6 10 Dec 11:30 .ruby-version
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 bin
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x  30 sriramkannan  staff   960 10 Dec 11:32 .
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:33 .circleci
+drwxr-xr-x  13 sriramkannan  staff   416 10 Dec 13:40 .git
+drwxr-xr-x   4 sriramkannan  staff   128 14 Dec 20:00 ..
+MOJL0451LM:laa-great-ideas sriramkannan$ date
+Sat 15 Dec 2018 16:16:20 GMT
+MOJL0451LM:laa-great-ideas sriramkannan$ cd .circleci/
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build: # A job called "build" within the pipeline.
+    docker: # run the steps with Docker
+      - image: circleci/ruby:2.5.3-node-browsers
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      - run:
+          name: Say hello
+          command: echo "Hello world"
+
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"hello world to Sri"
+[master 261e408] hello world to Sri
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 375 bytes | 375.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   1b89903..261e408  master -> master
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build: # A job called "build" within the pipeline.
+    docker: # run the steps with Docker
+      - image: circleci/ruby:2.5.3-node-browsers
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      - run:
+          name: Say hello
+          command: echo "Hello world, Sri!"
+
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"Added CicleCI Skeleton Config"
+[master d65f923] Added CicleCI Skeleton Config
+ 1 file changed, 42 insertions(+), 11 deletions(-)
+ rewrite .circleci/config.yml (95%)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 707 bytes | 707.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   261e408..d65f923  master -> master
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"Added install dependencies"
+[master 7eb33a2] Added install dependencies
+ 1 file changed, 5 insertions(+)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 463 bytes | 463.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   d65f923..7eb33a2  master -> master
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"Added install dependenciesi - bug fix"
+[master 2009de5] Added install dependenciesi - bug fix
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 391 bytes | 391.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   7eb33a2..2009de5  master -> master
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ cat config.yml
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      # Install dependencies:
+      - bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - npm install
+
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 bin
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ cd vendor/
+MOJL0451LM:vendor sriramkannan$ ls
+MOJL0451LM:vendor sriramkannan$ ls -lrt
+MOJL0451LM:vendor sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/vendor
+MOJL0451LM:vendor sriramkannan$ ls -lrt
+MOJL0451LM:vendor sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/vendor
+MOJL0451LM:vendor sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 bin
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+MOJL0451LM:laa-great-ideas sriramkannan$ cd bin
+MOJL0451LM:bin sriramkannan$ ls -lrt
+total 56
+-rwxr-xr-x  1 sriramkannan  staff  156 10 Dec 11:30 bundle
+-rwxr-xr-x  1 sriramkannan  staff  291 10 Dec 11:30 rails
+-rwxr-xr-x  1 sriramkannan  staff  240 10 Dec 11:30 rake
+-rwxr-xr-x  1 sriramkannan  staff  988 10 Dec 11:30 setup
+-rwxr-xr-x  1 sriramkannan  staff  537 10 Dec 11:30 spring
+-rwxr-xr-x  1 sriramkannan  staff  850 10 Dec 11:30 update
+-rwxr-xr-x  1 sriramkannan  staff  294 10 Dec 11:30 yarn
+MOJL0451LM:bin sriramkannan$ cd bundle 
+-bash: cd: bundle: Not a directory
+MOJL0451LM:bin sriramkannan$ vi bundle 
+MOJL0451LM:bin sriramkannan$ vi *
+7 files to edit
+MOJL0451LM:bin sriramkannan$ 
+MOJL0451LM:bin sriramkannan$ 
+MOJL0451LM:bin sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/bin
+MOJL0451LM:bin sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ cd bi
+-bash: cd: bi: No such file or directory
+MOJL0451LM:laa-great-ideas sriramkannan$ cd bin/
+MOJL0451LM:bin sriramkannan$ ls -lrt
+total 56
+-rwxr-xr-x  1 sriramkannan  staff  156 10 Dec 11:30 bundle
+-rwxr-xr-x  1 sriramkannan  staff  291 10 Dec 11:30 rails
+-rwxr-xr-x  1 sriramkannan  staff  240 10 Dec 11:30 rake
+-rwxr-xr-x  1 sriramkannan  staff  988 10 Dec 11:30 setup
+-rwxr-xr-x  1 sriramkannan  staff  537 10 Dec 11:30 spring
+-rwxr-xr-x  1 sriramkannan  staff  850 10 Dec 11:30 update
+-rwxr-xr-x  1 sriramkannan  staff  294 10 Dec 11:30 yarn
+MOJL0451LM:bin sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ cat README.md 
+# Great Ideas
+[![CircleCI](https://circleci.com/gh/ministryofjustice/laa-great-ideas.svg?style=svg)](https://circleci.com/gh/ministryofjustice/laa-great-ideas)
+
+Great Ideas allows LAA staff to submit their ideas for consideration to the Continuous Improvement team.
+
+## Setting up a development environment
+
+### Dependencies
+Install [PostgreSQL](https://www.postgresql.org) 10.5
+
+### Setup
+
+```
+bundle install
+
+npm install
+
+rake db:setup
+rake db:migrate
+```
+
+### Setup dummy data
+`rake db:seed`
+
+### Reset database and seed data
+`rake db:reset`
+
+### Run the application server
+
+`rails server`
+
+## Testing
+
+To execute Rspec tests and coverage
+
+`rake`
+
+## Running in Docker
+
+Install (Docker Compose)[https://docs.docker.com/compose/]
+
+```
+docker-compose build
+
+docker-compose up
+```
+In new terminal window:
+
+`docker-compose run app rake db:reset`
+
+## Contributing
+
+Bug reports and pull requests are welcome.
+
+1. Fork the project (https://github.com/ministryofjustice/laa-great-ideas/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit until you are happy with your contribution (`git commit -am 'Add some feature'`)
+4. Push the branch (`git push origin my-new-feature`)
+5. Make sure your changes are covered by tests, so that we don't break it unintentionally in the future.
+6. Create a new pull request.
+
+## License
+
+Released under the [MIT License](http://www.opensource.org/licenses/MIT). Copyright (c) 2015-2016 Ministry of Justice.MOJL0451LM:laa-great-ideas sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lart
+total 120
+-rw-r--r--   1 sriramkannan  staff   730 10 Dec 11:30 .gitignore
+-rw-r--r--   1 sriramkannan  staff    22 10 Dec 11:30 .rspec
+-rw-r--r--   1 sriramkannan  staff   493 10 Dec 11:30 .rubocop.yml
+-rw-r--r--   1 sriramkannan  staff   390 10 Dec 11:30 .rubocop_todo.yml
+-rw-r--r--   1 sriramkannan  staff     6 10 Dec 11:30 .ruby-version
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x  30 sriramkannan  staff   960 10 Dec 11:32 .
+drwxr-xr-x   4 sriramkannan  staff   128 14 Dec 20:00 ..
+drwxr-xr-x  13 sriramkannan  staff   416 15 Dec 16:39 .git
+drwxr-xr-x   3 sriramkannan  staff    96 15 Dec 16:47 .circleci
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ cd .c
+-bash: cd: .c: No such file or directory
+MOJL0451LM:laa-great-ideas sriramkannan$ .circleci/
+-bash: .circleci/: is a directory
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lart
+total 120
+-rw-r--r--   1 sriramkannan  staff   730 10 Dec 11:30 .gitignore
+-rw-r--r--   1 sriramkannan  staff    22 10 Dec 11:30 .rspec
+-rw-r--r--   1 sriramkannan  staff   493 10 Dec 11:30 .rubocop.yml
+-rw-r--r--   1 sriramkannan  staff   390 10 Dec 11:30 .rubocop_todo.yml
+-rw-r--r--   1 sriramkannan  staff     6 10 Dec 11:30 .ruby-version
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x  30 sriramkannan  staff   960 10 Dec 11:32 .
+drwxr-xr-x   4 sriramkannan  staff   128 14 Dec 20:00 ..
+drwxr-xr-x  13 sriramkannan  staff   416 15 Dec 16:39 .git
+drwxr-xr-x   3 sriramkannan  staff    96 15 Dec 16:47 .circleci
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ cd .circleci/
+MOJL0451LM:.circleci sriramkannan$ ls -lrt
+total 8
+-rw-r--r--  1 sriramkannan  staff  882 15 Dec 16:39 config.yml
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"install dependencies - bug fix 2"
+[master 809d09a] install dependencies - bug fix 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 384 bytes | 384.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   2009de5..809d09a  master -> master
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      # Install dependencies:
+      - bundle install --jobs=4 --retry=3 --path vendor # /bundle
+      - npm install
+
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"install dependencies - bug fix 3"
+[master 1600220] install dependencies - bug fix 3
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 385 bytes | 385.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   809d09a..1600220  master -> master
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"install dependencies - bug fix 4"
+[master f26d608] install dependencies - bug fix 4
+ 1 file changed, 1 insertion(+)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 409 bytes | 409.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   1600220..f26d608  master -> master
+MOJL0451LM:.circleci sriramkannan$ bundle
+Warning: the running version of Bundler (1.16.3) is older than the version that created the lockfile (1.17.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+Fetching gem metadata from https://rubygems.org/.........
+Using rake 12.3.1
+Fetching concurrent-ruby 1.1.3
+Installing concurrent-ruby 1.1.3
+Fetching i18n 1.1.1
+Installing i18n 1.1.1
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Fetching activesupport 5.2.2
+Installing activesupport 5.2.2
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Fetching nokogiri 1.8.5
+Installing nokogiri 1.8.5 with native extensions
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Fetching loofah 2.2.3
+Installing loofah 2.2.3
+Using rails-html-sanitizer 1.0.4
+Fetching actionview 5.2.2
+Installing actionview 5.2.2
+Fetching rack 2.0.6
+Installing rack 2.0.6
+Fetching rack-test 1.1.0
+Installing rack-test 1.1.0
+Fetching actionpack 5.2.2
+Installing actionpack 5.2.2
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Fetching actioncable 5.2.2
+Installing actioncable 5.2.2
+Using globalid 0.4.1
+Fetching activejob 5.2.2
+Installing activejob 5.2.2
+Fetching mini_mime 1.0.1
+Installing mini_mime 1.0.1
+Fetching mail 2.7.1
+Installing mail 2.7.1
+Fetching actionmailer 5.2.2
+Installing actionmailer 5.2.2
+Fetching activemodel 5.2.2
+Installing activemodel 5.2.2
+Using arel 9.0.0
+Fetching activerecord 5.2.2
+Installing activerecord 5.2.2
+Using mimemagic 0.3.2
+Fetching marcel 0.3.3
+Installing marcel 0.3.3
+Fetching activestorage 5.2.2
+Installing activestorage 5.2.2
+Fetching public_suffix 3.0.3
+Installing public_suffix 3.0.3
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Fetching ast 2.4.0
+Installing ast 2.4.0
+Fetching bcrypt 3.1.12
+Installing bcrypt 3.1.12 with native extensions
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Fetching bootsnap 1.3.2
+Installing bootsnap 1.3.2 with native extensions
+Using bundler 1.16.3
+Using byebug 10.0.2
+Fetching regexp_parser 1.3.0
+Installing regexp_parser 1.3.0
+Fetching xpath 3.2.0
+Installing xpath 3.2.0
+Fetching capybara 3.12.0
+Installing capybara 3.12.0
+Using ffi 1.9.25
+Using childprocess 0.9.0
+Fetching chromedriver-helper 2.1.0
+Installing chromedriver-helper 2.1.0
+Fetching orm_adapter 0.5.0
+Installing orm_adapter 0.5.0
+Fetching method_source 0.9.2
+Installing method_source 0.9.2
+Fetching thor 0.20.3
+Installing thor 0.20.3
+Fetching railties 5.2.2
+Installing railties 5.2.2
+Fetching responders 2.4.0
+Installing responders 2.4.0
+Fetching warden 1.2.7
+Installing warden 1.2.7
+Fetching devise 4.5.0
+Installing devise 4.5.0
+Fetching diff-lcs 1.3
+Installing diff-lcs 1.3
+Fetching docile 1.3.1
+Installing docile 1.3.1
+Using execjs 2.7.0
+Fetching factory_bot 4.11.1
+Installing factory_bot 4.11.1
+Fetching factory_bot_rails 4.11.1
+Installing factory_bot_rails 4.11.1
+Fetching faker 1.9.1
+Installing faker 1.9.1
+Fetching jwt 2.1.0
+Installing jwt 2.1.0
+Fetching notifications-ruby-client 2.9.0
+Installing notifications-ruby-client 2.9.0
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Fetching rails 5.2.2
+Installing rails 5.2.2
+Fetching govuk_notify_rails 2.1.0
+Installing govuk_notify_rails 2.1.0
+Fetching jaro_winkler 1.5.1
+Installing jaro_winkler 1.5.1 with native extensions
+Using multi_json 1.13.1
+Fetching jbuilder 2.8.0
+Installing jbuilder 2.8.0
+Using json 2.1.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.9.10
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Fetching parallel 1.12.1
+Installing parallel 1.12.1
+Fetching parser 2.5.3.0
+Installing parser 2.5.3.0
+Fetching pg 1.1.3
+Installing pg 1.1.3 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /Users/sriramkannan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pg-1.1.3/ext
+/Users/sriramkannan/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20181215-4110-14nxj47.rb extconf.rb
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/sriramkannan/.rbenv/versions/2.5.1/bin/$(RUBY_BASE_NAME)
+	--with-pg
+	--without-pg
+	--enable-windows-cross
+	--disable-windows-cross
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/lib
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+/Users/sriramkannan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-darwin-16/2.5.0-static/pg-1.1.3/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /Users/sriramkannan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pg-1.1.3
+for inspection.
+Results logged to
+/Users/sriramkannan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/extensions/x86_64-darwin-16/2.5.0-static/pg-1.1.3/gem_make.out
+
+An error occurred while installing pg (1.1.3), and Bundler cannot continue.
+Make sure that `gem install pg -v '1.1.3' --source 'https://rubygems.org/'` succeeds before bundling.
+
+In Gemfile:
+  pg
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ ls -lrt
+total 8
+-rw-r--r--  1 sriramkannan  staff  923 15 Dec 17:07 config.yml
+MOJL0451LM:.circleci sriramkannan$ ls -lrt
+total 8
+-rw-r--r--  1 sriramkannan  staff  923 15 Dec 17:07 config.yml
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ ls -lart
+total 8
+drwxr-xr-x  30 sriramkannan  staff  960 10 Dec 11:32 ..
+-rw-r--r--   1 sriramkannan  staff  923 15 Dec 17:07 config.yml
+drwxr-xr-x   3 sriramkannan  staff   96 15 Dec 17:07 .
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"install dependencies - bug fix 5"
+[master 2a49151] install dependencies - bug fix 5
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 458 bytes | 458.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   f26d608..2a49151  master -> master
+MOJL0451LM:.circleci sriramkannan$ git log
+commit 2a49151a898bd60dcb9d08868f514db6aaf456af (HEAD -> master, origin/master, origin/HEAD)
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 17:25:40 2018 +0000
+
+    install dependencies - bug fix 5
+
+commit f26d60854a73a3a07eccadc656dbfddf53932e7a
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 17:07:50 2018 +0000
+
+    install dependencies - bug fix 4
+
+commit 160022065ba99a03b6e1cb6ee9a50332df189ca3
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 17:04:30 2018 +0000
+
+    install dependencies - bug fix 3
+
+commit 809d09af9b77ad64df1961a02b41a70a602dd7cd
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 16:59:04 2018 +0000
+
+    install dependencies - bug fix 2
+
+commit 2009de57eee6407de4f211a8daa7a0a35890ad09
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 16:39:54 2018 +0000
+
+    Added install dependenciesi - bug fix
+
+commit 7eb33a231d019cbf2b8ab0513c7b5a6c6444a80c
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 16:37:11 2018 +0000
+
+    Added install dependencies
+
+commit d65f923d2f5e8b2f210d7592b39364a0ef38c9db
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 16:30:12 2018 +0000
+
+    Added CicleCI Skeleton Config
+
+commit 261e4080de1627fac88a7094e4f44e199df12373
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Sat Dec 15 16:18:24 2018 +0000
+
+    hello world to Sri
+
+commit 1b8990399e769cf7ecbec245e5df21a296353fe3
+Author: Sriram Kannan <sriram.kannan@digital.justice.gov.uk>
+Date:   Mon Dec 10 11:34:51 2018 +0000
+
+    Creating Circle CI Config File
+    To specify the circle CI config parameters.
+
+commit 71977d9810cbd2a5097137c7f4804040197e9787
+Author: Adrian Clay <adrian@madetech.com>
+Date:   Thu Dec 6 14:29:14 2018 +0000
+
+    Remove the existing CircleCI config
+    
+    This repository will be used for a practical session of setting
+    up a CI/CD pipeline against an existing application.
+    
+    Removing the exisiting CI/CD will make the pracitcal easier to do.
+
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+
+[1]+  Stopped                 vi config.yml
+MOJL0451LM:.circleci sriramkannan$ ps 
+  PID TTY           TIME CMD
+ 1022 ttys000    0:00.60 -bash
+15766 ttys000    0:00.08 vi config.yml
+ 3560 ttys001    0:00.05 -bash
+MOJL0451LM:.circleci sriramkannan$ ps
+  PID TTY           TIME CMD
+ 1022 ttys000    0:00.61 -bash
+15766 ttys000    0:00.08 vi config.yml
+ 3560 ttys001    0:00.05 -bash
+MOJL0451LM:.circleci sriramkannan$ fg 
+vi config.yml
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"install dependencies - bug fix 6"
+[master da64eb3] install dependencies - bug fix 6
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 430 bytes | 430.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   2a49151..da64eb3  master -> master
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            npm install
+
+
+      #- run:
+      #    name: Install Dependencies
+      #    command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      #    command: npm install
+
+      # Install dependencies
+      # - bundle check --path vendor/bundle
+      # - bundle install --jobs=4 --retry=3 --path vendor/bundle
+      # - npm install
+
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"setup database"
+[master 56b8c81] setup database
+ 1 file changed, 3 insertions(+)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 432 bytes | 432.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   da64eb3..56b8c81  master -> master
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            npm install
+      - run:
+          name: Setup Database
+          command: bundle exec rake db:create db:schema:load
+
+
+      #- run:
+      #    name: Install Dependencies
+      #    command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      #    command: npm install
+
+      # Install dependencies
+      # - bundle check --path vendor/bundle
+      # - bundle install --jobs=4 --retry=3 --path vendor/bundle
+      # - npm install
+
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ cat config.yml 
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            npm install
+      - run:
+          name: Setup Database
+          command: bundle exec rake db:create db:schema:load
+      - run:
+          name: Run the linter
+          command: bundle exec rubocop
+
+
+      #- run:
+      #    name: Install Dependencies
+      #    command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      #    command: npm install
+
+      # Install dependencies
+      # - bundle check --path vendor/bundle
+      # - bundle install --jobs=4 --retry=3 --path vendor/bundle
+      # - npm install
+
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"run the linter"
+[master e8550de] run the linter
+ 1 file changed, 3 insertions(+)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 402 bytes | 402.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   56b8c81..e8550de  master -> master
+MOJL0451LM:.circleci sriramkannan$ vi config.yml 
+MOJL0451LM:.circleci sriramkannan$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   config.yml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:.circleci sriramkannan$ git add .
+MOJL0451LM:.circleci sriramkannan$ git commit -m"run tests"
+[master e50aecc] run tests
+ 1 file changed, 3 insertions(+)
+MOJL0451LM:.circleci sriramkannan$ git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 390 bytes | 390.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   e8550de..e50aecc  master -> master
+MOJL0451LM:.circleci sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas/.circleci
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ 
+MOJL0451LM:.circleci sriramkannan$ cd ..
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ git branch branch-1
+MOJL0451LM:laa-great-ideas sriramkannan$ git branch
+  branch-1
+* master
+MOJL0451LM:laa-great-ideas sriramkannan$ git log --oneline --decorate
+e50aecc (HEAD -> master, origin/master, origin/HEAD, branch-1) run tests
+e8550de run the linter
+56b8c81 setup database
+da64eb3 install dependencies - bug fix 6
+2a49151 install dependencies - bug fix 5
+f26d608 install dependencies - bug fix 4
+1600220 install dependencies - bug fix 3
+809d09a install dependencies - bug fix 2
+2009de5 Added install dependenciesi - bug fix
+7eb33a2 Added install dependencies
+d65f923 Added CicleCI Skeleton Config
+261e408 hello world to Sri
+1b89903 Creating Circle CI Config File To specify the circle CI config parameters.
+71977d9 Remove the existing CircleCI config
+1375da4 Merge pull request #52 from ministryofjustice/dependabot/bundler/factory_bot_rails-4.11.1
+65b7580 Merge pull request #53 from ministryofjustice/dependabot/bundler/rails-controller-testing-1.0.4
+8fb69b0 Merge pull request #54 from ministryofjustice/dependabot/bundler/rubocop-0.61.0
+098ae31 Bump rubocop from 0.60.0 to 0.61.0
+a14c2ab Bump rails-controller-testing from 1.0.3 to 1.0.4
+d5be477 Bump factory_bot_rails from 4.10.0 to 4.11.1
+22c8a2f Merge pull request #51 from ministryofjustice/feature/add_admin_fields
+140ea1e Add review_date and participation_level admin fields
+96e2260 Merge pull request #50 from ministryofjustice/dependabot/bundler/rails-5.2.2
+a84af25 Merge pull request #49 from ministryofjustice/feature/add-seed-data
+5781a79 GI-69 Add seed data
+06fdb50 Bump rails from 5.2.1.1 to 5.2.2
+43b2ace Merge pull request #47 from ministryofjustice/feature/factorybot
+ddaa294 Merge pull request #48 from ministryofjustice/dependabot/bundler/rails-controller-testing-1.0.3
+8c7c382 Bump rails-controller-testing from 1.0.2 to 1.0.3
+acb4dd5 GI-68 Introduced FactoryBot for tests
+81aa01c Merge pull request #42 from ministryofjustice/feature/add-comments
+dc0bd04 Nested comments under ideas for resources
+f89297c GI-24 Add comments
+e9b654d Merge pull request #44 from ministryofjustice/dependabot/bundler/rails-5.2.1.1
+a7862bf Merge pull request #45 from ministryofjustice/dependabot/bundler/capybara-3.12.0
+debd526 Bump capybara from 3.11.1 to 3.12.0
+a25fbb8 [Security] Bump rails from 5.2.1 to 5.2.1.1
+9988751 Merge pull request #43 from ministryofjustice/feature/status-awaiting-approval
+c265965 Fixed rubocop trailing whitespace error
+5299f72 Set status to awaiting approval when an idea is submitted
+9651cea Merge pull request #41 from ministryofjustice/dependabot/bundler/govuk_notify_rails-2.1.0
+356a790 Bump govuk_notify_rails from 2.0.0 to 2.1.0
+9eec3c1 Merge pull request #39 from ministryofjustice/feature/rubocop-corrections
+38cdd19 Fix rubocop issues
+b113db4 Merge pull request #38 from ministryofjustice/feature/add-status-to-ideas
+116c1b4 Merge pull request #27 from ministryofjustice/feature/email-validation-nofify
+113ef71 GI-56 Add email functionality to app
+cbbf2cc Add spec tests for updating idea status
+89dc354 Merge pull request #22 from ministryofjustice/feature/LoginPagePrototype
+6b8a690 (origin/feature/LoginPagePrototype) added gov stying to signin/up and forgot password pages. Editted scaffolds.scss
+a1cdd4e Add status to ideas
+dfa7a38 Merge pull request #28 from ministryofjustice/feature/logout-button
+63043d4 Merge pull request #37 from ministryofjustice/feature/submitted-view
+5041312 GI-19 As admin, see list of submitted ideas
+8d35d44 Merge pull request #36 from ministryofjustice/dependabot/bundler/uglifier-4.1.20
+6c150d3 Bump uglifier from 4.1.19 to 4.1.20
+dea2ca5 Merge pull request #35 from ministryofjustice/dependabot/bundler/capybara-3.11.1
+00935b9 Merge pull request #33 from ministryofjustice/dependabot/bundler/jbuilder-2.8.0
+c21ae75 Merge pull request #32 from ministryofjustice/dependabot/bundler/rubocop-0.60.0
+5a18f6c Bump rubocop from 0.59.2 to 0.60.0
+cd4b5fb Merge pull request #30 from ministryofjustice/dependabot/bundler/selenium-webdriver-3.141.0
+35ff485 Merge pull request #29 from ministryofjustice/dependabot/bundler/rspec-rails-3.8.1
+0f3a463 Bump rspec-rails from 3.8.0 to 3.8.1
+d712ab2 Merge pull request #26 from ministryofjustice/feature/assigned_ideas_view
+bd4a8ac Bump capybara from 3.9.0 to 3.11.1
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$  git push origin branch-1
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch-1' on GitHub by visiting:
+remote:      https://github.com/sriramkannanLAA/laa-great-ideas/pull/new/branch-1
+remote: 
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+ * [new branch]      branch-1 -> branch-1
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ pwd
+/Users/sriramkannan/sri/git/circlecipractice/laa-great-ideas
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ git branch
+  branch-1
+* master
+MOJL0451LM:laa-great-ideas sriramkannan$ git checkout branch-1
+Switched to branch 'branch-1'
+MOJL0451LM:laa-great-ideas sriramkannan$ git branch
+* branch-1
+  master
+MOJL0451LM:laa-great-ideas sriramkannan$ ls -lrt
+total 80
+-rw-r--r--   1 sriramkannan  staff   360 10 Dec 11:30 Dockerfile
+-rw-r--r--   1 sriramkannan  staff  2127 10 Dec 11:30 Gemfile
+-rw-r--r--   1 sriramkannan  staff  7284 10 Dec 11:30 Gemfile.lock
+-rw-r--r--   1 sriramkannan  staff  1463 10 Dec 11:30 README.md
+-rw-r--r--   1 sriramkannan  staff   258 10 Dec 11:30 Rakefile
+drwxr-xr-x  11 sriramkannan  staff   352 10 Dec 11:30 app
+-rw-r--r--   1 sriramkannan  staff   161 10 Dec 11:30 config.ru
+drwxr-xr-x  15 sriramkannan  staff   480 10 Dec 11:30 config
+drwxr-xr-x   5 sriramkannan  staff   160 10 Dec 11:30 db
+-rw-r--r--   1 sriramkannan  staff   342 10 Dec 11:30 docker-compose.yml
+drwxr-xr-x   4 sriramkannan  staff   128 10 Dec 11:30 lib
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 log
+-rw-r--r--   1 sriramkannan  staff   359 10 Dec 11:30 package-lock.json
+-rw-r--r--   1 sriramkannan  staff   102 10 Dec 11:30 package.json
+drwxr-xr-x   9 sriramkannan  staff   288 10 Dec 11:30 public
+drwxr-xr-x  12 sriramkannan  staff   384 10 Dec 11:30 spec
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 storage
+drwxr-xr-x  10 sriramkannan  staff   320 10 Dec 11:30 test
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 tmp
+drwxr-xr-x   3 sriramkannan  staff    96 10 Dec 11:30 vendor
+drwxr-xr-x   9 sriramkannan  staff   288 15 Dec 16:55 bin
+MOJL0451LM:laa-great-ideas sriramkannan$ vi README.md 
+MOJL0451LM:laa-great-ideas sriramkannan$ git status
+On branch branch-1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MOJL0451LM:laa-great-ideas sriramkannan$ git add .
+MOJL0451LM:laa-great-ideas sriramkannan$ git status
+On branch branch-1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   README.md
+
+MOJL0451LM:laa-great-ideas sriramkannan$ git commit -m"Added a test line to README.md"
+[branch-1 a0ac6c5] Added a test line to README.md
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+MOJL0451LM:laa-great-ideas sriramkannan$ git push
+fatal: The current branch branch-1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch-1
+
+MOJL0451LM:laa-great-ideas sriramkannan$ git push --set-upstream origin branch-1
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 451 bytes | 451.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/sriramkannanLAA/laa-great-ideas.git
+   e50aecc..a0ac6c5  branch-1 -> branch-1
+Branch 'branch-1' set up to track remote branch 'branch-1' from 'origin'.
+MOJL0451LM:laa-great-ideas sriramkannan$ 
+
