@@ -14,10 +14,15 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: Install Dependencies
+          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+          command: npm install
+
       # Install dependencies
-      - bundle check --path vendor/bundle
-      - bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - npm install
+      # - bundle check --path vendor/bundle
+      # - bundle install --jobs=4 --retry=3 --path vendor/bundle
+      # - npm install
 
 
 
