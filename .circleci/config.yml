@@ -1,11 +1,42 @@
 version: 2
 jobs:
-  build: # A job called "build" within the pipeline.
-    docker: # run the steps with Docker
-      - image: circleci/ruby:2.5.3-node-browsers
-    steps: # a collection of executable commands
-      - checkout # special step to check out source code to working directory
-      - run:
-          name: Say hello
-          command: echo "Hello world, Sri!"
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGUSER: root
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: laa-great-ideas_test
 
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# version: 2
+# jobs:
+#   build: # A job called "build" within the pipeline.
+#     docker: # run the steps with Docker
+#       - image: circleci/ruby:2.5.3-node-browsers
+#     steps: # a collection of executable commands
+#       - checkout # special step to check out source code to working directory
+#       - run:
+#           name: Say hello
+#           command: echo "Hello world, Sri!"
+# 
